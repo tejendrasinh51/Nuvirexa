@@ -1,0 +1,64 @@
+import type { Project } from '@/types/content'
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    slug: 'luxe-commerce',
+    title: 'Luxe Commerce Platform',
+    client: 'Retail Startup',
+    category: 'Web',
+    description: 'A premium e-commerce experience with 40% conversion lift after redesign.',
+    challenge: 'Legacy Shopify theme with poor mobile UX and slow load times hurting conversions.',
+    solution: 'Custom Next.js storefront with optimized checkout, dynamic product pages, and headless CMS.',
+    results: ['40% conversion increase', '2.1s LCP improvement', '28% lower bounce rate'],
+    technologies: ['Next.js', 'Stripe', 'Sanity', 'Vercel'],
+    images: [],
+    featured: true,
+  },
+  {
+    id: '2',
+    slug: 'finflow-dashboard',
+    title: 'FinFlow Analytics Dashboard',
+    client: 'Fintech Scale-up',
+    category: 'Apps',
+    description: 'Real-time financial analytics dashboard serving 10K+ daily active users.',
+    challenge: 'Fragmented data sources and no unified view for executive decision-making.',
+    solution: 'Full-stack SaaS dashboard with real-time APIs, role-based access, and export capabilities.',
+    results: ['10K+ DAU', '99.9% uptime', '60% faster reporting'],
+    technologies: ['Next.js', 'PostgreSQL', 'Redis', 'AWS'],
+    images: [],
+    featured: true,
+  },
+  {
+    id: '3',
+    slug: 'nova-brand',
+    title: 'Nova Health Brand System',
+    client: 'Healthcare Startup',
+    category: 'Design',
+    description: 'Complete brand identity and marketing site for a digital health platform.',
+    challenge: 'Inconsistent brand presence across web, social, and investor materials.',
+    solution: 'Comprehensive design system, logo suite, and responsive marketing website.',
+    results: ['Unified brand across 12 touchpoints', '3x social engagement', 'Series A ready presence'],
+    technologies: ['Figma', 'Next.js', 'Tailwind'],
+    images: [],
+    featured: true,
+  },
+  {
+    id: '4',
+    slug: 'assist-ai',
+    title: 'AssistAI Customer Bot',
+    client: 'SaaS Company',
+    category: 'AI',
+    description: 'Gemini-powered support assistant reducing ticket volume by 35%.',
+    challenge: 'Support team overwhelmed with repetitive inquiries during rapid growth.',
+    solution: 'Custom AI chatbot integrated with knowledge base and CRM escalation flows.',
+    results: ['35% ticket reduction', '24/7 instant responses', '4.8/5 user satisfaction'],
+    technologies: ['Gemini', 'Next.js', 'n8n', 'Intercom'],
+    images: [],
+    featured: true,
+  },
+]
+
+export function getProjectBySlug(slug: string) {
+  return projects.find((p) => p.slug === slug)
+}
