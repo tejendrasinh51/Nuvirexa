@@ -52,8 +52,10 @@ export async function POST(req: NextRequest) {
         'Cache-Control': 'no-cache',
       },
     })
-  } catch {
-    return new Response(JSON.stringify({ error: 'Chat service unavailable' }), {
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    console.error('Gemini error:', message)
+    return new Response(JSON.stringify({ error: message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     })
