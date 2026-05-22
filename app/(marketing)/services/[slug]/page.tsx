@@ -9,11 +9,12 @@ import { getServiceIcon } from '@/lib/icons'
 import { Check } from 'lucide-react'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const service = getServiceBySlug(params.slug)
+  const { slug } = await params
+  const service = getServiceBySlug(slug)
   if (!service) return {}
   return generatePageMetadata({
     title: service.title,
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }: Props) {
   })
 }
 
-export default function ServiceDetailPage({ params }: Props) {
-  const service = getServiceBySlug(params.slug)
+export default async function ServiceDetailPage({ params }: Props) {
+  const { slug } = await params
+  const service = getServiceBySlug(slug)
   if (!service) notFound()
 
   const Icon = getServiceIcon(service.icon)

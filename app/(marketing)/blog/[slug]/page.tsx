@@ -6,11 +6,12 @@ import { getBlogPostBySlug, blogPosts } from '@/data/blog'
 import { ArrowLeft } from 'lucide-react'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const post = getBlogPostBySlug(params.slug)
+  const { slug } = await params
+  const post = getBlogPostBySlug(slug)
   if (!post) return {}
   return generatePageMetadata({
     title: post.title,
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }: Props) {
   })
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getBlogPostBySlug(params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = getBlogPostBySlug(slug)
   if (!post) notFound()
 
   return (
