@@ -9,7 +9,7 @@ interface BlurRevealProps {
   children: React.ReactNode
   className?: string
   delay?: number
-  as?: 'div' | 'h1' | 'h2' | 'p'
+  as?: 'div' | 'h1' | 'h2' | 'p' | 'span'
 }
 
 export function BlurReveal({ children, className, delay = 0, as = 'div' }: BlurRevealProps) {

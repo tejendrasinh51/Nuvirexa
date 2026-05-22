@@ -13,7 +13,7 @@ export function ChatbotWidget() {
       id: '0',
       role: 'assistant',
       content:
-        "Hi! I'm Nuvix, Nuvirexa's AI assistant. How can I help you today? Ask me about our services, pricing, or how we can help grow your business. ✦",
+        "Hi! I'm Nuvix, Nuvirexa's AI assistant. How can I help you today? Ask me about our services, pricing, or how we can help grow your business.",
       timestamp: new Date(),
     },
   ])
@@ -79,7 +79,7 @@ export function ChatbotWidget() {
       setMessages((prev) =>
         prev.map((m) =>
           m.id === assistantMessage.id
-            ? { ...m, content: 'Sorry, I encountered an error. Please try again or email hello@nuvirexa.com.' }
+            ? { ...m, content: 'Sorry, I encountered an error. Please try again or email tejendrasinh51@gmail.com.' }
             : m
         )
       )
@@ -164,7 +164,7 @@ export function ChatbotWidget() {
                   </p>
                 </div>
                 <div className="ml-auto text-white/20 text-xs font-mono">
-                  <span className="text-white/40">Gemini</span>
+                  <span className="text-white/40"></span>
                 </div>
               </div>
             </div>

@@ -39,7 +39,7 @@ export default function CareersPage() {
       toast.success('Application submitted! We will be in touch.')
       e.currentTarget.reset()
     } catch {
-      toast.error('Failed to submit. Please email hello@nuvirexa.com')
+      toast.error('Failed to submit. Please email tejendrasinh51@gmail.com')
     } finally {
       setLoading(false)
     }

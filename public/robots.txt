@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://nuvirexa.com/sitemap.xml
+Sitemap: https://nuvirexa.vercel.app/sitemap.xml

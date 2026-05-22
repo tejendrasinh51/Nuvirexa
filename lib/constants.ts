@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Nuvirexa Agency',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://nuvirexa.com',
-  email: 'hello@nuvirexa.com',
+  email: 'tejendrasinh51@gmail.com',
   founder: 'Tejendrasinh Sisodia',
   founderAvatar: '/images/founder/tejendrasinh.png',
   founderHandle: 'tejendrasinh',

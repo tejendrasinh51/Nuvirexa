@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(apiKey)
     await resend.emails.send({
-      from: 'Nuvirexa <noreply@nuvirexa.com>',
+      from: "Nuvirexa <onboarding@resend.dev>",
       to: contactEmail,
       subject: `New Contact: ${data.name} — ${data.service || 'General Inquiry'}`,
       text: `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || 'N/A'}\nService: ${data.service || 'N/A'}\nBudget: ${data.budget || 'N/A'}\n\nMessage:\n${data.message}`,
