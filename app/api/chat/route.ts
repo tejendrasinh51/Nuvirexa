@@ -19,8 +19,11 @@ export async function POST(req: NextRequest) {
       systemInstruction: SYSTEM_PROMPT,
     })
 
+    // Gemini requires history to start with a 'user' message — strip leading assistant messages
+    const history = messages.slice(0, -1)
+    const firstUserIdx = history.findIndex((m) => m.role === 'user')
     const chat = model.startChat({
-      history: messages.slice(0, -1).map((m) => ({
+      history: (firstUserIdx === -1 ? [] : history.slice(firstUserIdx)).map((m) => ({
         role: m.role === 'assistant' ? 'model' : 'user',
         parts: [{ text: m.content }],
       })),
