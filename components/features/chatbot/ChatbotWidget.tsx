@@ -75,11 +75,12 @@ export function ChatbotWidget() {
           prev.map((m) => (m.id === assistantMessage.id ? { ...m, content: m.content + chunk } : m))
         )
       }
-    } catch {
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err)
       setMessages((prev) =>
         prev.map((m) =>
           m.id === assistantMessage.id
-            ? { ...m, content: 'Sorry, I encountered an error. Please try again or email tejendrasinh51@gmail.com.' }
+            ? { ...m, content: `Error: ${msg}` }
             : m
         )
       )
