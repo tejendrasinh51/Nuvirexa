@@ -23,7 +23,7 @@ Copy `.env.example` to `.env.local` and configure:
 | `NEXT_PUBLIC_CAL_LINK` | Cal.com booking link (e.g. `nuvirexa/discovery-call`) |
 | `RESEND_API_KEY` | Resend API for contact form emails |
 | `CONTACT_EMAIL` | Inbox for contact submissions |
-| `NEXT_PUBLIC_SITE_URL` | Production URL (e.g. `https://nuvirexa.com`) |
+| `NEXT_PUBLIC_SITE_URL` | Production URL (e.g. `https://nuvirexa.vercel.app`) |
 
 ## Scripts
 

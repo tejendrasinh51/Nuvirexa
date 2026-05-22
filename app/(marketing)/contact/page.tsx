@@ -46,8 +46,9 @@ export default function ContactPage() {
       })
       const json = await res.json()
       if (!res.ok) {
-        if (json.error) setErrors({ form: 'Please check your inputs and try again.' })
-        throw new Error('Failed')
+        setErrors({ form: 'Please check your inputs and try again.' })
+        toast.error('Failed to send. Please email us directly.')
+        return
       }
       toast.success('Message sent! We will respond within 24 hours.')
       e.currentTarget.reset()
@@ -187,10 +188,7 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-accent-violet shrink-0" />
                     <div>
                       <p className="text-sm text-muted">Email</p>
-                      <a
-                        href={`mailto:${SITE.email}`}
-                        className="text-white hover:text-accent-cyan transition-colors"
-                      >
+                      <a href={`mailto:${SITE.email}`} className="text-white hover:text-accent-cyan transition-colors">
                         {SITE.email}
                       </a>
                     </div>
