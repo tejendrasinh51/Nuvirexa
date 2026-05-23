@@ -26,7 +26,7 @@ const heroStats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="hero relative">
       <Aurora />
       <Particles />
       <GradientOrbs variant="hero" />
@@ -37,17 +37,17 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 container mx-auto pt-28 sm:pt-32 md:pt-36 pb-20 sm:pb-28 md:pb-32 text-center">
+      <div className="hero-content relative z-10 text-center">
         <SlideUp delay={0}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-violet/30 bg-accent-violet/10 backdrop-blur-sm mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse" />
-            <ShinyText className="text-sm font-mono text-white/80 tracking-widest uppercase">
+          <div className="hero-badge">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse shrink-0" />
+            <ShinyText className="font-mono uppercase">
               ✦ Nuvirexa Agency
             </ShinyText>
           </div>
         </SlideUp>
 
-        <h1 className="font-display font-black leading-[0.92] tracking-tight mb-6 sm:mb-8 text-[clamp(2.25rem,10vw,9.5rem)] text-balance px-1">
+        <h1 className="font-display text-balance px-1">
           <SlideUp delay={0.15}>
             <span className="block text-white">We Build Brands</span>
           </SlideUp>
@@ -64,7 +64,7 @@ export function Hero() {
         </h1>
 
         <SlideUp delay={0.65}>
-          <p className="text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 sm:mb-12 leading-relaxed px-2">
+          <p className="hero-subtitle px-2">
             Premium websites, AI tools, and digital strategies for ambitious brands ready to dominate their market.
           </p>
         </SlideUp>
@@ -72,13 +72,13 @@ export function Hero() {
         <SlideUp delay={0.6}>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto px-2 sm:px-0">
             <MagneticButton className="w-full sm:w-auto">
-              <CalButton size="lg" className="w-full sm:w-auto">
+              <CalButton size="lg" className="hero-cta-primary w-full sm:w-auto">
                 Schedule a Call
               </CalButton>
             </MagneticButton>
             <MagneticButton className="w-full sm:w-auto">
               <Link href="/portfolio" className="block w-full sm:w-auto">
-                <Button variant="secondary" size="lg" className="w-full">
+                <Button variant="secondary" size="lg" className="hero-cta-secondary w-full">
                   View Our Work
                 </Button>
               </Link>

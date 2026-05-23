@@ -77,6 +77,115 @@
   }
 }
 
+@layer components {
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-block: clamp(100px, 14vh, 160px);
+    padding-inline: clamp(1rem, 4vw, 5rem);
+    overflow: hidden;
+  }
+
+  .hero-content {
+    max-width: 1100px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 7vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.3em;
+    text-wrap: balance;
+  }
+
+  @media (min-width: 1400px) {
+    .hero h1 {
+      font-size: clamp(6rem, 7.5vw, 9.5rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: clamp(2.6rem, 9vw, 4rem);
+      letter-spacing: -0.02em;
+    }
+  }
+
+  .hero h1 .text-gradient-animated {
+    font-size: inherit;
+    line-height: inherit;
+    display: inline-block;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.45em 1.2em;
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 640px;
+    margin-inline: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-cta-primary {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9) !important;
+    color: #fff !important;
+    padding: 0.9em 2.2em !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    border: none !important;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .hero-cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 45px rgba(124, 58, 237, 0.55);
+  }
+
+  .hero-cta-secondary {
+    background: rgba(255, 255, 255, 0.07) !important;
+    color: #fff !important;
+    padding: 0.9em 2.2em !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    backdrop-filter: none !important;
+    transition: background 0.2s ease, border-color 0.2s ease !important;
+  }
+
+  .hero-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+  }
+}
+
 @layer utilities {
   .text-gradient {
     background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #06b6d4 100%);
