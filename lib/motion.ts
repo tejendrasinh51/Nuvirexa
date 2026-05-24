@@ -1,13 +1,13 @@
-/** Shared motion timing — slower, premium pacing */
+/** Shared motion timing — snappy for navigation, premium on scroll reveals */
 export const MOTION_EASE = [0.16, 1, 0.3, 1] as const
 
 export const MOTION_DURATION = {
-  page: 0.55,
-  reveal: 0.85,
-  slide: 0.9,
-  word: 0.6,
-  wordStagger: 0.1,
-  scramble: 1600,
+  reveal: 0.4,
+  revealFast: 0.22,
+  slide: 0.55,
+  word: 0.35,
+  wordStagger: 0.04,
+  scramble: 1200,
 } as const
 
 export const MARQUEE_DURATION_DEFAULT = 40

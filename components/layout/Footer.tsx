@@ -11,7 +11,7 @@ import { DotMatrix } from '@/components/backgrounds/DotMatrix'
 const footerColumns = [
   {
     title: 'Services',
-    links: services.slice(0, 5).map((s) => ({ label: s.title, href: `/services/${s.slug}` })),
+    links: services.slice(0, 7).map((s) => ({ label: s.title, href: `/services/${s.slug}` })),
   },
   {
     title: 'Company',

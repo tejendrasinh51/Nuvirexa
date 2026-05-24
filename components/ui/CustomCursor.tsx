@@ -13,7 +13,13 @@ export function CustomCursor() {
     setEnabled(true)
     document.documentElement.classList.add('custom-cursor-active')
 
-    const updatePos = (e: MouseEvent) => {
+    let frame = 0
+    let lastEvent: MouseEvent | null = null
+
+    const flush = () => {
+      frame = 0
+      if (!lastEvent) return
+      const e = lastEvent
       setPos({ x: e.clientX, y: e.clientY })
       const target = e.target as HTMLElement
       setIsPointer(
@@ -22,9 +28,15 @@ export function CustomCursor() {
       )
     }
 
-    window.addEventListener('mousemove', updatePos)
+    const updatePos = (e: MouseEvent) => {
+      lastEvent = e
+      if (!frame) frame = requestAnimationFrame(flush)
+    }
+
+    window.addEventListener('mousemove', updatePos, { passive: true })
     return () => {
       window.removeEventListener('mousemove', updatePos)
+      if (frame) cancelAnimationFrame(frame)
       document.documentElement.classList.remove('custom-cursor-active')
     }
   }, [])

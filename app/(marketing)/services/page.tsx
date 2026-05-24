@@ -10,7 +10,8 @@ import { ArrowRight } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
   title: 'Services',
-  description: 'Premium web development, AI integrations, design, SEO, and digital marketing services.',
+  description:
+    'AI SaaS, AI agents, voice AI, AEO, web development, design, SEO, and digital marketing services.',
   path: '/services',
 })
 
@@ -20,7 +21,7 @@ export default function ServicesPage() {
       <PageHeader
         badge="Our Services"
         title="Everything you need to grow"
-        subtitle="Nine specialized services, one unified team committed to your digital success."
+        subtitle="Thirteen specialized services — from AI products to answer-engine visibility — one team committed to your growth."
       />
 
       <section className="py-16 container mx-auto px-6">

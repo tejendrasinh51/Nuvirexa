@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { FEATURES } from '@/lib/constants'
 
@@ -29,6 +30,20 @@ const BackToTop = dynamic(
 )
 
 export function ClientWidgets() {
+  const [ready, setReady] = useState(false)
+
+  useEffect(() => {
+    const enable = () => setReady(true)
+    if (typeof requestIdleCallback === 'function') {
+      const id = requestIdleCallback(enable, { timeout: 2000 })
+      return () => cancelIdleCallback(id)
+    }
+    const t = setTimeout(enable, 1200)
+    return () => clearTimeout(t)
+  }, [])
+
+  if (!ready) return null
+
   return (
     <>
       <ScrollProgress />

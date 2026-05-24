@@ -17,7 +17,7 @@ export function PageHeader({ title, subtitle, badge }: PageHeaderProps) {
       <NoiseOverlay opacity={0.03} />
       <div className="absolute inset-0 bg-mesh-1 pointer-events-none opacity-60" aria-hidden />
       <div className="container mx-auto relative z-10 text-center pb-6 sm:pb-8">
-        <FadeIn>
+        <FadeIn eager>
           {badge && (
             <ShinyText className="font-mono text-sm text-accent-cyan tracking-widest uppercase mb-4 block">
               {badge}
@@ -25,6 +25,7 @@ export function PageHeader({ title, subtitle, badge }: PageHeaderProps) {
           )}
           <BlurReveal
             as="h1"
+            priority
             className="font-display text-display-sm sm:text-display-md lg:text-display-lg font-black text-white mb-4 justify-center text-balance px-2"
           >
             {title}

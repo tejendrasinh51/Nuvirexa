@@ -1,9 +1,13 @@
 import {
+  Bot,
   Brain,
   Globe,
   Layers,
   Megaphone,
+  Mic,
   Palette,
+  Rocket,
+  ScanSearch,
   Share2,
   Sparkles,
   TrendingUp,
@@ -21,6 +25,10 @@ const iconMap: Record<string, LucideIcon> = {
   Brain,
   Megaphone,
   Zap,
+  Rocket,
+  Bot,
+  Mic,
+  ScanSearch,
 }
 
 export function getServiceIcon(name: string): LucideIcon {

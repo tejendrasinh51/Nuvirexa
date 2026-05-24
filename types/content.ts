@@ -1,3 +1,19 @@
+export interface ServiceOffering {
+  title: string
+  description: string
+  bullets?: string[]
+}
+
+export interface ServiceFaq {
+  question: string
+  answer: string
+}
+
+export interface ServiceTestimonial {
+  quote: string
+  author: string
+}
+
 export interface Service {
   id: string
   slug: string
@@ -9,6 +25,13 @@ export interface Service {
   technologies: string[]
   startingPrice?: string
   deliveryTime?: string
+  tagline?: string
+  idealFor?: string[]
+  offerings?: ServiceOffering[]
+  processSteps?: { title: string; description: string }[]
+  pricingNotes?: string[]
+  testimonials?: ServiceTestimonial[]
+  faqs?: ServiceFaq[]
 }
 
 export interface Project {

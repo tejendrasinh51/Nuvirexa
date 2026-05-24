@@ -16,7 +16,7 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -271,5 +271,24 @@
 
   .safe-top {
     padding-top: max(0px, env(safe-area-inset-top));
+  }
+
+  .navigation-progress {
+    animation: nav-progress 0.28s ease-out forwards;
+  }
+
+  @keyframes nav-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html:has(:target) {
+      scroll-behavior: smooth;
+    }
   }
 }

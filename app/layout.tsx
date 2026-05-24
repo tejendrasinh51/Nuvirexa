@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ClientWidgets } from '@/components/layout/ClientWidgets'
-import { PageTransition } from '@/components/layout/PageTransition'
+import { NavigationProgress } from '@/components/layout/NavigationProgress'
+import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { Toaster } from 'react-hot-toast'
 import { clashDisplay, dmSans, jetbrainsMono } from '@/lib/fonts'
 import { organizationSchema } from '@/lib/metadata'
@@ -71,10 +72,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="font-body antialiased">
+        <NavigationProgress />
+        <ScrollToTop />
         <Navbar />
-        <main id="main-content">
-          <PageTransition>{children}</PageTransition>
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
         <ClientWidgets />
         <Toaster

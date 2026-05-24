@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useScrolledNav } from '@/hooks/useScrolledNav'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
@@ -34,10 +34,7 @@ export function Navbar() {
       >
         Skip to main content
       </a>
-      <motion.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+      <header
         className={cn(
           'fixed top-0 left-0 right-0 z-50 px-10 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
           scrolled
@@ -64,6 +61,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  prefetch
                   className="relative text-[0.9rem] font-medium text-white/70 hover:text-white tracking-[0.01em] transition-colors group py-1 no-underline"
                 >
                   {link.label}
@@ -101,7 +99,7 @@ export function Navbar() {
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </nav>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {mobileOpen && (

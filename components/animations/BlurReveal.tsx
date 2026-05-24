@@ -10,21 +10,23 @@ interface BlurRevealProps {
   className?: string
   delay?: number
   as?: 'div' | 'h1' | 'h2' | 'p' | 'span'
+  /** Page titles: skip per-word stagger for faster route paint */
+  priority?: boolean
 }
 
-export function BlurReveal({ children, className, delay = 0, as = 'div' }: BlurRevealProps) {
+export function BlurReveal({ children, className, delay = 0, as = 'div', priority = false }: BlurRevealProps) {
   const reduced = useReducedMotion()
   const Component = motion[as]
 
   const text = typeof children === 'string' ? children : null
 
-  if (text) {
+  if (text && !priority) {
     const words = text.split(' ')
     const needsBlockWrapper = className?.includes('block')
     const viewProps = {
       initial: 'hidden' as const,
       whileInView: 'visible' as const,
-      viewport: { once: true, margin: '-10%' },
+      viewport: { once: true, margin: '-8%' },
     }
     const wordSpans = words.map((word, i) => (
       <motion.span
@@ -66,15 +68,28 @@ export function BlurReveal({ children, className, delay = 0, as = 'div' }: BlurR
     )
   }
 
+  const motionProps = priority
+    ? {
+        initial: { opacity: 0, filter: reduced ? 'blur(0px)' : 'blur(8px)', y: reduced ? 0 : 8 },
+        animate: { opacity: 1, filter: 'blur(0px)', y: 0 },
+      }
+    : {
+        initial: { opacity: 0, filter: reduced ? 'blur(0px)' : 'blur(12px)', y: reduced ? 0 : 16 },
+        whileInView: { opacity: 1, filter: 'blur(0px)', y: 0 },
+        viewport: { once: true, margin: '-8%' },
+      }
+
   return (
     <Component
-      initial={{ opacity: 0, filter: reduced ? 'blur(0px)' : 'blur(12px)', y: reduced ? 0 : 16 }}
-      whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-      viewport={{ once: true, margin: '-10%' }}
-      transition={{ duration: reduced ? 0.1 : MOTION_DURATION.reveal, delay, ease: MOTION_EASE }}
+      {...motionProps}
+      transition={{
+        duration: reduced ? 0.1 : priority ? MOTION_DURATION.revealFast : MOTION_DURATION.reveal,
+        delay,
+        ease: MOTION_EASE,
+      }}
       className={className}
     >
-      {children}
+      {priority && text ? text : children}
     </Component>
   )
 }
