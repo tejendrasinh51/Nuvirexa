@@ -13,6 +13,7 @@ export const projects: Project[] = [
     results: ['40% conversion increase', '2.1s LCP improvement', '28% lower bounce rate'],
     technologies: ['Next.js', 'Stripe', 'Sanity', 'Vercel'],
     images: [],
+    liveUrl: 'https://github.com/tejendrasinh51/LuxeCommerce/tree/main',
     featured: true,
   },
   {
