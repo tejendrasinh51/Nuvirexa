@@ -12,6 +12,9 @@ import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
+  verification: {
+    google: '0mBpKdCUxN6qwC-ZJBZ_OFg9NrJIFs9FwNXrSNV2orQ',
+  },
   title: {
     default: 'Nuvirexa Agency — Premium Digital Growth Partner',
     template: '%s | Nuvirexa Agency',
