@@ -47,6 +47,7 @@ export interface Project {
   technologies: string[]
   images: string[]
   liveUrl?: string
+  githubUrl?: string
   featured: boolean
 }
 

@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/layout/PageHeader'
 import { FadeIn } from '@/components/animations/FadeIn'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { getProjectBySlug, projects } from '@/data/projects'
-import { ArrowLeft, ExternalLink } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -40,8 +40,8 @@ export default async function CaseStudyPage({ params }: Props) {
               <span className="text-xs font-mono uppercase tracking-widest text-muted block mb-1">Client</span>
               <span className="text-white font-medium">{project.client}</span>
             </div>
-            {project.liveUrl && (
-              <div>
+            <div className="flex flex-wrap items-center gap-3">
+              {project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
@@ -51,8 +51,19 @@ export default async function CaseStudyPage({ params }: Props) {
                   <span>Visit Project</span>
                   <ExternalLink className="w-4 h-4 text-accent-cyan group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
-              </div>
-            )}
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-accent-violet/40 hover:shadow-glow-violet group"
+                >
+                  <span>View Code</span>
+                  <Github className="w-4 h-4 text-accent-violet group-hover:scale-110 transition-transform" />
+                </a>
+              )}
+            </div>
           </div>
           <h2 className="font-display text-2xl font-bold mb-4">The Challenge</h2>
           <p className="text-white/70 leading-relaxed mb-12">{project.challenge}</p>
