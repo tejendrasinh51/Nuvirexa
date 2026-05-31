@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: 'Nuvirexa Agency — Premium Digital Growth Partner',
     description: 'Transforming businesses through premium web development, AI, and digital strategy.',
-    images: [{ url: '/images/og-image.svg', width: 1200, height: 630, alt: SITE.name }],
+    images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Nuvirexa Agency — Premium Digital Growth Partner',
     description: 'Transforming businesses through premium web development, AI, and digital strategy.',
-    images: ['/images/og-image.svg'],
+    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,

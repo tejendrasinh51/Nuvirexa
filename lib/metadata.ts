@@ -13,7 +13,7 @@ export function generatePageMetadata({
   image?: string
 }): Metadata {
   const url = `${SITE.url}${path}`
-  const ogImage = image || '/images/og-image.svg'
+  const ogImage = image || '/images/og-image.png'
   return {
     title,
     description,
@@ -40,5 +40,14 @@ export const organizationSchema = {
     contactType: 'customer support',
     email: SITE.email,
   },
-  founder: { '@type': 'Person', name: SITE.founder },
+  founder: { 
+    '@type': 'Person', 
+    name: 'Tejendrasinh Sisodia',
+    jobTitle: 'Founder & CEO',
+    url: `${SITE.url}/founder`,
+    sameAs: [
+      'https://linkedin.com/in/tejendrasinh',
+      'https://github.com/tejendrasinh51'
+    ]
+  },
 }
