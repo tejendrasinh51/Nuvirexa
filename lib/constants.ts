@@ -19,10 +19,10 @@ export const NAV_LINKS = [
 ] as const
 
 export const SOCIAL_LINKS = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/nuvirexa' },
-  { label: 'Twitter', href: 'https://twitter.com/nuvirexa' },
-  { label: 'Instagram', href: 'https://instagram.com/nuvirexa' },
-  { label: 'GitHub', href: 'https://github.com/nuvirexa' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tejendrasinh-sisodia-243a5a293/' },
+  { label: 'X', href: 'https://x.com/tejendrasinh51' },
+  { label: 'Instagram', href: 'https://instagram.com/tejendrasinhsisodia' },
+  { label: 'GitHub', href: 'https://github.com/tejendrasinh51' },
 ] as const
 
 export const FEATURES = {
