@@ -166,6 +166,27 @@ export const websiteSchema = {
   },
 }
 
+export const founderSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE.founder,
+  alternateName: 'Tejendrasinh Sisodia (Nuvirexa)',
+  description: 'Founder & CEO of Nuvirexa, India\'s premium AI and digital growth agency.',
+  url: `${SITE.url}/founder`,
+  jobTitle: 'Founder & CEO',
+  worksFor: {
+    '@type': 'Organization',
+    name: SITE.shortName,
+    url: SITE.url,
+  },
+  sameAs: [
+    'https://linkedin.com/in/tejendrasinh-sisodia-243a5a293/',
+    'https://github.com/tejendrasinh51',
+    'https://x.com/tejendrasinh51',
+  ],
+  image: `${SITE.url}/images/founder/tejendrasinh.png`,
+}
+
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'ProfessionalService'],

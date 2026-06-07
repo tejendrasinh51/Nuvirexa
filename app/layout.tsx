@@ -7,7 +7,7 @@ import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { Toaster } from 'react-hot-toast'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { clashDisplay, dmSans, jetbrainsMono } from '@/lib/fonts'
-import { organizationSchema, websiteSchema, localBusinessSchema } from '@/lib/metadata'
+import { organizationSchema, websiteSchema, localBusinessSchema, founderSchema } from '@/lib/metadata'
 import { SITE } from '@/lib/constants'
 import '@/styles/globals.css'
 
@@ -122,6 +122,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
         />
       </head>
       <body className="font-body antialiased">

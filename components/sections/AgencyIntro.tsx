@@ -29,11 +29,11 @@ export function AgencyIntro() {
               We turn ambitious visions into digital reality
             </BlurReveal>
             <p className="text-white/70 text-lg leading-relaxed mb-4">
-              Nuvirexa was founded on a simple belief: every business deserves a digital presence as
+              Founded by <strong className="text-white">Tejendrasinh Sisodia</strong>, Nuvirexa was built on a simple belief: every business deserves a digital presence as
               exceptional as their product. We combine cinematic design, engineering excellence, and AI innovation.
             </p>
             <p className="text-muted leading-relaxed">
-              From startups launching their first site to enterprises scaling complex platforms <strong className="text-white">across India and beyond</strong>, we deliver
+              From startups launching their first site to enterprises scaling complex platforms <strong className="text-white">across India</strong>, we deliver
               measurable results with transparency, speed, and world-class craftsmanship.
             </p>
           </FadeIn>

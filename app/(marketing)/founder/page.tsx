@@ -44,16 +44,38 @@ export default function FounderPage() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Tejendrasinh Sisodia',
+    givenName: 'Tejendrasinh',
+    familyName: 'Sisodia',
+    alternateName: 'Tejendrasinh Sisodia (Nuvirexa)',
+    description: 'Founder & CEO of Nuvirexa, India\'s premium AI and digital growth agency. Expert in AI development, Answer Engine Optimization (AEO), Voice AI agents, and Next.js architecture.',
+    image: `${SITE.url}/images/founder/tejendrasinh.png`,
     jobTitle: 'Founder & CEO',
     worksFor: {
       '@type': 'Organization',
       name: 'Nuvirexa',
+      url: SITE.url,
     },
-    url: `${SITE.url}/founder`,
     sameAs: [
-      'https://linkedin.com/in/tejendrasinh',
-      'https://github.com/tejendrasinh51'
-    ]
+      'https://linkedin.com/in/tejendrasinh-sisodia-243a5a293/',
+      'https://github.com/tejendrasinh51',
+      'https://x.com/tejendrasinh51',
+      'https://instagram.com/tejendrasinhsisodia',
+    ],
+    url: `${SITE.url}/founder`,
+    knowsAbout: [
+      'Answer Engine Optimization (AEO)',
+      'AI Development',
+      'Voice AI Agents',
+      'Next.js Development',
+      'SaaS Development',
+      'Digital Growth Strategy',
+      'Technical SEO',
+      'Web Development',
+    ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'BCA Honours',
+    },
   }
 
   return (
@@ -69,10 +91,14 @@ export default function FounderPage() {
           <section className="mb-24 flex flex-col md:flex-row items-center gap-12">
             <FadeIn className="flex-shrink-0">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/10 relative">
-                {/* Placeholder for founder image */}
-                <div className="w-full h-full bg-gradient-to-br from-accent-cyan to-accent-blue flex items-center justify-center">
-                  <User size={80} className="text-white/50" />
-                </div>
+                <Image
+                  src={SITE.founderAvatar}
+                  alt={SITE.founder}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 192px, 256px"
+                  priority
+                />
               </div>
             </FadeIn>
             <FadeIn delay={0.1} className="flex-1 text-center md:text-left">
