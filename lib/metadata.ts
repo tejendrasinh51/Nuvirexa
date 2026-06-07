@@ -109,7 +109,7 @@ export function createServiceSchema(service: {
       url: SITE.url,
     },
     ...(service.category && { serviceType: service.category }),
-    areaServed: ['IN', 'US', 'GB', 'AE', 'AU', 'CA'],
+    areaServed: 'IN',
   }
 }
 
@@ -131,7 +131,7 @@ export const organizationSchema = {
     contactType: 'customer service',
     email: SITE.email,
     availableLanguage: ['English', 'Hindi', 'Gujarati'],
-    areaServed: ['IN', 'US', 'GB', 'AE', 'AU', 'CA'],
+    areaServed: 'IN',
   },
   address: {
     '@type': 'PostalAddress',
@@ -176,9 +176,6 @@ export const localBusinessSchema = {
   description: 'Nuvirexa is a premium digital growth agency offering AI development, AEO, Voice AI agents, web development, and digital strategy services.',
   areaServed: [
     { '@type': 'Country', name: 'India' },
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'United Kingdom' },
-    { '@type': 'Country', name: 'United Arab Emirates' },
   ],
   address: {
     '@type': 'PostalAddress',

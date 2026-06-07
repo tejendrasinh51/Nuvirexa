@@ -24,7 +24,7 @@ const differentiators = [
   { icon: Eye, title: 'Full Transparency', description: 'Clear timelines, honest pricing, and direct access to your project team.' },
   { icon: Brain, title: 'AI-First Approach', description: 'We integrate cutting-edge AI to give your business a competitive advantage.' },
   { icon: Target, title: 'Results-Driven', description: 'Every decision is measured against KPIs — conversions, performance, and ROI.' },
-  { icon: Globe, title: 'Global Standards', description: 'World-class craftsmanship inspired by Linear, Vercel, and top-tier agencies.' },
+  { icon: Globe, title: 'National Reach, Global Mindset', description: 'Serving ambitious businesses across India with world-class quality, global standards, and international-ready solutions.' },
 ]
 
 export function WhyChooseUs() {

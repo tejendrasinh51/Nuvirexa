@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Nuvirexa',
   },
   description:
-    "Nuvirexa is India's premium digital growth agency. We build AI-powered SaaS, Voice AI agents, stunning Next.js websites, and deliver Answer Engine Optimization (AEO). 12+ countries served.",
+    "Nuvirexa is India's premium digital growth agency. We build AI-powered SaaS, Voice AI agents, stunning Next.js websites, and deliver Answer Engine Optimization (AEO) for ambitious businesses across India.",
   keywords: [
     'digital agency india',
     'ai development company',
@@ -33,9 +33,10 @@ export const metadata: Metadata = {
     'web development agency',
     'ui ux design agency',
     'Nuvirexa',
+    'Tejendrasinh Sisodia',
   ],
   authors: [{ name: SITE.founder, url: `${SITE.url}/founder` }],
-  creator: SITE.shortName,
+  creator: SITE.founder,
   publisher: SITE.shortName,
   formatDetection: {
     telephone: true,
@@ -46,9 +47,6 @@ export const metadata: Metadata = {
     canonical: SITE.url,
     languages: {
       'en-IN': SITE.url,
-      'en-US': SITE.url,
-      'en-GB': SITE.url,
-      'en-AE': SITE.url,
       'x-default': SITE.url,
     },
   },
@@ -59,7 +57,7 @@ export const metadata: Metadata = {
     siteName: SITE.shortName,
     title: 'Nuvirexa — Premium Digital Growth Partner | AI, Web & AEO Agency India',
     description:
-      "India's premium digital growth agency. AI development, AEO, Voice AI agents, SaaS/MVP builds, UI/UX, and brand strategy for startups and enterprises.",
+      "India's premium digital growth agency. AI development, AEO, Voice AI agents, SaaS/MVP builds, UI/UX, and brand strategy for ambitious businesses across India.",
     images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: 'Nuvirexa Agency' }],
     countryName: 'India',
   },
@@ -69,7 +67,7 @@ export const metadata: Metadata = {
     creator: '@tejendrasinh51',
     title: 'Nuvirexa — Premium Digital Growth Partner',
     description:
-      "India's premier digital growth agency. AI, AEO, Voice AI, Web Development.",
+      "India's premier digital growth agency — AI, AEO, Voice AI, Web Development. Serving ambitious businesses across India.",
     images: ['/images/og-image.png'],
   },
   robots: {

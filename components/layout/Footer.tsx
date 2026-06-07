@@ -17,6 +17,7 @@ const footerColumns = [
     title: 'Company',
     links: [
       ...NAV_LINKS.filter((l) => l.href !== '/').map((l) => ({ label: l.label, href: l.href })),
+      { label: 'Founder', href: '/founder' },
       { label: 'Careers', href: '/careers' },
       { label: 'Process', href: '/process' },
     ],
@@ -95,7 +96,7 @@ export function Footer() {
               <div className="w-2 h-2 rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan animate-pulse" />
             </div>
             <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
-              Premium digital growth partner building world-class websites, apps, and AI solutions.
+              Premium digital growth partner serving ambitious businesses across India — building world-class websites, apps, and AI solutions.
             </p>
             <div className="flex gap-3">
               {SOCIAL_LINKS.map((social) => (

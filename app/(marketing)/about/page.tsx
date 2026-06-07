@@ -10,7 +10,7 @@ import { Target, Heart, Lightbulb, Users, Rocket, Award } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
   title: 'About Nuvirexa — AI & Digital Growth Agency India | Our Story',
-  description: 'Learn about Nuvirexa, India\'s premium AI and digital growth agency. Meet founder Tejendrasinh Sisodia and discover our mission to build world-class AI, web, and AEO solutions.',
+  description: 'Learn about Nuvirexa, India\'s premium AI and digital growth agency. Meet founder Tejendrasinh Sisodia and discover our mission to build world-class AI, web, and AEO solutions for businesses across India.',
   path: '/about',
 })
 
@@ -39,10 +39,10 @@ export default function AboutPage() {
             held back by slow, generic websites and disconnected strategies — so we built an agency that does it
             differently.
           </p>
-          <p className="text-muted leading-relaxed">
-            Today, we partner with startups, SMBs, and enterprise teams worldwide — delivering cinematic websites,
-            scalable applications, and AI-powered tools that drive real growth.
-          </p>
+            <p className="text-muted leading-relaxed">
+              Today, we partner with startups, SMBs, and enterprise teams across India — delivering cinematic websites,
+              scalable applications, and AI-powered tools that drive real growth.
+            </p>
         </FadeIn>
       </section>
 
@@ -105,9 +105,9 @@ export default function AboutPage() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="font-display text-4xl font-bold text-gradient">
-              <CountUp end={12} suffix="+" />
+              <CountUp end={15} suffix="+" />
             </p>
-            <p className="text-muted text-sm mt-2">Countries</p>
+            <p className="text-muted text-sm mt-2">Cities Across India</p>
           </FadeIn>
         </div>
       </section>

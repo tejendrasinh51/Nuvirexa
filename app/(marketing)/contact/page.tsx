@@ -204,7 +204,7 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-accent-violet shrink-0" />
                     <div>
                       <p className="text-sm text-muted">Location</p>
-                      <p className="text-white">Remote — Global clients</p>
+                      <p className="text-white">India — Serving Clients Nationwide</p>
                     </div>
                   </div>
                 </div>
