@@ -4,8 +4,8 @@ import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 
 export const metadata = generatePageMetadata({
-  title: 'Testimonials',
-  description: 'See what clients say about working with Nuvirexa Agency.',
+  title: 'Client Testimonials — What Our Clients Say | Nuvirexa',
+  description: 'Hear from founders and teams who partnered with Nuvirexa for AI development, web design, AEO, and digital growth solutions.',
   path: '/testimonials',
 })
 

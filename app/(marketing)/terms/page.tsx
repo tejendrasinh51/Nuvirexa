@@ -4,8 +4,8 @@ import { FadeIn } from '@/components/animations/FadeIn'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Terms of Service',
-  description: 'Terms of service for Nuvirexa Agency website and services.',
+  title: 'Terms of Service — Website & Services Agreement | Nuvirexa',
+  description: 'Read the terms of service governing the use of Nuvirexa\'s website and digital services.',
   path: '/terms',
 })
 

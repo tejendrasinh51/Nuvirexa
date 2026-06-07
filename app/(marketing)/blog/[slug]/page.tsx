@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { generatePageMetadata } from '@/lib/metadata'
+import { generatePageMetadata, createArticleSchema, createBreadcrumbSchema } from '@/lib/metadata'
 import { FadeIn } from '@/components/animations/FadeIn'
 import { getBlogPostBySlug, blogPosts } from '@/data/blog'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { ArrowLeft } from 'lucide-react'
 
 interface Props {
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props) {
   const post = getBlogPostBySlug(slug)
   if (!post) return {}
   return generatePageMetadata({
-    title: post.title,
+    title: `${post.title} | Nuvirexa Blog`,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
   })
@@ -25,8 +26,17 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getBlogPostBySlug(slug)
   if (!post) notFound()
 
+  const articleSchema = createArticleSchema(post)
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+    { name: post.title, path: `/blog/${post.slug}` },
+  ])
+
   return (
     <article className="pt-32 pb-24">
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <div className="container mx-auto px-6 max-w-3xl">
         <Link href="/blog" className="inline-flex items-center gap-2 text-muted hover:text-white text-sm mb-8">
           <ArrowLeft className="w-4 h-4" /> Back to blog

@@ -6,10 +6,14 @@ import { FadeIn } from '@/components/animations/FadeIn'
 import { BlurReveal } from '@/components/animations/BlurReveal'
 import { ShinyText } from '@/components/animations/ShinyText'
 import { faqItems } from '@/data/faq'
+import { createFaqSchema } from '@/lib/metadata'
+import { JsonLd } from '@/components/seo/JsonLd'
 
 export function FaqSection() {
+  const faqSchema = createFaqSchema(faqItems.map((f) => ({ question: f.question, answer: f.answer })))
   return (
     <section className="section-pad relative section-alt">
+      <JsonLd data={faqSchema} />
       <div className="container mx-auto max-w-3xl relative z-10">
         <FadeIn className="text-center mb-12 sm:mb-16">
           <ShinyText className="font-mono text-sm text-accent-cyan tracking-widest uppercase mb-4 block">

@@ -7,8 +7,8 @@ import { FaqSection } from '@/components/sections/FaqSection'
 import { Check } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'Pricing',
-  description: 'Flexible pricing tiers for websites, apps, and digital services. Custom quotes available.',
+  title: 'Pricing — AI Development, Web & Digital Services | Nuvirexa',
+  description: 'Custom pricing for AI development, web development, AEO, voice AI agents, and digital services. Transparent quotes tailored to your project scope.',
   path: '/pricing',
 })
 

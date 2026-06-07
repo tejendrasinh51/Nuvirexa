@@ -1,10 +1,11 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { generatePageMetadata } from '@/lib/metadata'
+import { generatePageMetadata, createBreadcrumbSchema } from '@/lib/metadata'
 import { PageHeader } from '@/components/layout/PageHeader'
 import { FadeIn } from '@/components/animations/FadeIn'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { getProjectBySlug, projects } from '@/data/projects'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
 
 interface Props {
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props) {
   const project = getProjectBySlug(slug)
   if (!project) return {}
   return generatePageMetadata({
-    title: project.title,
+    title: `${project.title} — Case Study | Nuvirexa`,
     description: project.description,
     path: `/case-studies/${project.slug}`,
   })
@@ -30,8 +31,15 @@ export default async function CaseStudyPage({ params }: Props) {
   const currentIndex = projects.findIndex((p) => p.slug === slug)
   const nextProject = projects[(currentIndex + 1) % projects.length]
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: project.title, path: `/case-studies/${project.slug}` },
+  ])
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
       <PageHeader badge={project.category} title={project.title} subtitle={project.description} />
       <section className="py-16 container mx-auto px-6 max-w-4xl">
         <FadeIn>

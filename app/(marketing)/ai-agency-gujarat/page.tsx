@@ -5,8 +5,8 @@ import { ArrowRight, MapPin, Bot, Cpu } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'AI Agency Gujarat | Automation & AI Integrations',
-  description: 'Leading AI Agency in Gujarat. We specialize in AI automation, custom LLM agents, and business process optimization using cutting-edge artificial intelligence.',
+  title: 'AI Agency Gujarat — AI Automation & Agent Development | Nuvirexa',
+  description: 'Leading AI agency in Gujarat. We specialize in AI automation, custom LLM agents, voice AI, and business process optimization for modern enterprises.',
   path: '/ai-agency-gujarat',
 })
 

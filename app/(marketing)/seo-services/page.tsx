@@ -5,8 +5,8 @@ import { ArrowRight, Search, BarChart3, Globe2, Target } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'SEO Services Gujarat | Rank Higher, Grow Faster',
-  description: 'Data-driven SEO services in Gujarat. We specialize in Technical SEO, Content Strategy, and Answer Engine Optimization (AEO) to drive organic growth.',
+  title: 'SEO Services Gujarat — Technical SEO & AEO Agency | Nuvirexa',
+  description: 'Data-driven SEO and AEO services in Gujarat. Specializing in Technical SEO, Answer Engine Optimization, content strategy, and local SEO to dominate search results.',
   path: '/seo-services',
 })
 

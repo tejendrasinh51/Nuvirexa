@@ -9,8 +9,8 @@ import { team } from '@/data/team'
 import { Target, Heart, Lightbulb, Users, Rocket, Award } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'About Us',
-  description: 'Learn about Nuvirexa Agency, our mission, values, and the team behind premium digital experiences.',
+  title: 'About Nuvirexa — AI & Digital Growth Agency India | Our Story',
+  description: 'Learn about Nuvirexa, India\'s premium AI and digital growth agency. Meet founder Tejendrasinh Sisodia and discover our mission to build world-class AI, web, and AEO solutions.',
   path: '/about',
 })
 

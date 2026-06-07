@@ -1,12 +1,26 @@
 export const SITE = {
   name: 'Nuvirexa Agency',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://nuvirexa.vercel.app',
+  shortName: 'Nuvirexa',
+  tagline: 'Premium Digital Growth Partner',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://nuvirexa.tech',
   email: 'tejendrasinh51@gmail.com',
   founder: 'Tejendrasinh Sisodia',
   founderAvatar: '/images/founder/tejendrasinh.png',
   founderHandle: 'tejendrasinh',
   profileCardIcon: '/images/profile/icon-pattern.png',
   calLink: process.env.NEXT_PUBLIC_CAL_LINK || 'nuvirexa/discovery-call',
+  locale: 'en_US',
+  themeColor: '#0A0A14',
+  address: {
+    locality: 'Gujarat',
+    country: 'India',
+  },
+  social: {
+    linkedin: 'https://www.linkedin.com/company/nuvirexa',
+    twitter: 'https://x.com/nuvirexa',
+    github: 'https://github.com/tejendrasinh51',
+    instagram: 'https://instagram.com/nuvirexa',
+  },
 } as const
 
 export const NAV_LINKS = [

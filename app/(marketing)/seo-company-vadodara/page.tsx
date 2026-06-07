@@ -5,8 +5,8 @@ import { ArrowRight, MapPin, Search, Target } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'SEO Company Vadodara | Top SEO Agency',
-  description: 'Looking for a reliable SEO company in Vadodara? We offer data-driven search engine optimization, local SEO, and AEO strategies to dominate Google rankings.',
+  title: 'SEO Company Vadodara — Top SEO & AEO Agency | Nuvirexa',
+  description: 'Reliable SEO company in Vadodara. Data-driven search engine optimization, local SEO, and Answer Engine Optimization (AEO) strategies to dominate rankings.',
   path: '/seo-company-vadodara',
 })
 

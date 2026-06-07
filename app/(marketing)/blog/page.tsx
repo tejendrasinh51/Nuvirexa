@@ -7,8 +7,8 @@ import { FEATURES } from '@/lib/constants'
 import { notFound } from 'next/navigation'
 
 export const metadata = generatePageMetadata({
-  title: 'Blog',
-  description: 'Insights on web development, AI, design, and digital growth from Nuvirexa Agency.',
+  title: 'Blog — AI, AEO, Web Development & Digital Growth Insights | Nuvirexa',
+  description: 'Expert insights on Answer Engine Optimization (AEO), AI development, Voice AI agents, Next.js web development, and digital growth strategies from Nuvirexa.',
   path: '/blog',
 })
 

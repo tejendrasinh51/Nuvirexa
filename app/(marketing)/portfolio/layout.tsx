@@ -1,8 +1,8 @@
 import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
-  title: 'Portfolio',
-  description: 'Explore our featured web development, app, design, and AI projects.',
+  title: 'Portfolio — AI, Web & Design Projects | Nuvirexa',
+  description: 'Explore Nuvirexa\'s featured portfolio of web development, AI, SaaS, and design projects. See how we deliver measurable results for ambitious brands.',
   path: '/portfolio',
 })
 

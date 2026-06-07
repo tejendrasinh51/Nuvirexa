@@ -7,8 +7,8 @@ import { FadeIn } from '@/components/animations/FadeIn'
 import { processSteps } from '@/data/process'
 
 export const metadata = generatePageMetadata({
-  title: 'Our Process',
-  description: 'Discover our proven 5-step process from discovery to launch and sustained growth.',
+  title: 'Our Process — How We Build AI & Web Solutions | Nuvirexa',
+  description: 'Discover Nuvirexa\'s proven 5-step process: from discovery and strategy to design, development, launch, and sustained growth for AI and web projects.',
   path: '/process',
 })
 

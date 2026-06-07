@@ -5,8 +5,8 @@ import { ArrowRight, Bot, Cpu, Zap, Database } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'AI Automation Services & Solutions',
-  description: 'Nuvirexa builds custom AI agents, automated workflows, and intelligent SaaS products to scale your business operations.',
+  title: 'AI Automation Services — Custom AI Agents & Workflows | Nuvirexa',
+  description: 'Nuvirexa builds custom AI agents, automated workflows, and intelligent SaaS products to scale your business operations. AI support, lead gen, and process automation.',
   path: '/ai-solutions',
 })
 

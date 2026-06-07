@@ -5,8 +5,8 @@ import { ArrowRight, Code, Layers, ShieldCheck, Rocket } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Custom Software Development Services',
-  description: 'End-to-end custom software development. We build scalable SaaS applications, robust APIs, and enterprise web portals using modern full-stack technologies.',
+  title: 'Custom Software Development — SaaS & Enterprise Apps | Nuvirexa',
+  description: 'End-to-end custom software development services. Build scalable SaaS platforms, robust APIs, and enterprise web portals with modern Next.js and AI integration.',
   path: '/custom-software-development',
 })
 

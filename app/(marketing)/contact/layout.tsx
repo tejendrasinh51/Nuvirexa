@@ -1,8 +1,8 @@
 import { generatePageMetadata } from '@/lib/metadata'
 
 export const metadata = generatePageMetadata({
-  title: 'Contact',
-  description: 'Get in touch with Nuvirexa Agency. Schedule a discovery call or send us a message.',
+  title: 'Contact Us — Start Your AI or Web Project | Nuvirexa',
+  description: 'Ready to build your AI product, website, or digital strategy? Contact Nuvirexa for a free discovery call. We respond within 24 hours.',
   path: '/contact',
 })
 

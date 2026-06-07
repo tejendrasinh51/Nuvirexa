@@ -5,8 +5,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Web Development Company Gujarat',
-  description: 'Nuvirexa is a premium web development company in Gujarat. We build high-performance, SEO-optimized, and conversion-focused websites.',
+  title: 'Web Development Company Gujarat — Premium Next.js Agency | Nuvirexa',
+  description: 'Premium web development company in Gujarat. Nuvirexa builds high-performance, SEO-optimized Next.js websites and web applications that drive growth.',
   path: '/web-development',
 })
 

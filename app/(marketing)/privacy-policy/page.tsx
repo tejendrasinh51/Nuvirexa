@@ -4,8 +4,8 @@ import { FadeIn } from '@/components/animations/FadeIn'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Privacy Policy',
-  description: 'Nuvirexa Agency privacy policy and data handling practices.',
+  title: 'Privacy Policy — How We Handle Your Data | Nuvirexa',
+  description: 'Nuvirexa\'s privacy policy outlines how we collect, use, and protect your personal information when you use our website and services.',
   path: '/privacy-policy',
 })
 

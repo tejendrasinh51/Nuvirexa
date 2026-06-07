@@ -6,8 +6,8 @@ import { ArrowRight, Code2, Database, LineChart, Globe, Briefcase, User, Lightbu
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Tejendrasinh Sisodia | Founder & CEO',
-  description: 'Tejendrasinh Sisodia is the Founder & CEO of Nuvirexa, specializing in Web Development, AI Solutions, SEO and Digital Growth.',
+  title: 'Tejendrasinh Sisodia — Founder & CEO of Nuvirexa | AEO & AI Expert',
+  description: 'Tejendrasinh Sisodia is the Founder & CEO of Nuvirexa. Expert in AI development, Answer Engine Optimization (AEO), Next.js architecture, and digital growth strategy.',
   path: '/founder',
 })
 

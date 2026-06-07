@@ -5,8 +5,8 @@ import { ArrowRight, MapPin, Code2, Rocket, TrendingUp } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Web Development Company Vadodara',
-  description: 'Looking for the best web development company in Vadodara? Nuvirexa builds high-performance, conversion-focused websites that drive real business results.',
+  title: 'Web Development Company Vadodara — Premium Websites | Nuvirexa',
+  description: 'Best web development company in Vadodara. Nuvirexa builds high-performance, conversion-focused Next.js websites and web apps that drive real business results.',
   path: '/web-development-company-vadodara',
 })
 

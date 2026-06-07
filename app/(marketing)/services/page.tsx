@@ -9,9 +9,9 @@ import { getServiceIcon } from '@/lib/icons'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata = generatePageMetadata({
-  title: 'Services',
+  title: 'Services — AI Development, Web, AEO & Digital Growth | Nuvirexa',
   description:
-    'AI SaaS, AI agents, voice AI, AEO, web development, design, SEO, and digital marketing services.',
+    '13 specialized services including AI SaaS development, Voice AI agents, Answer Engine Optimization (AEO), Next.js web development, UI/UX design, SEO, and automation.',
   path: '/services',
 })
 

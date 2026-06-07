@@ -5,8 +5,8 @@ import { ArrowRight, MapPin, Code2, Rocket, TrendingUp } from 'lucide-react'
 import { SITE } from '@/lib/constants'
 
 export const metadata = generatePageMetadata({
-  title: 'Web Development Company Gujarat | Premium Solutions',
-  description: 'Nuvirexa is the leading web development company in Gujarat. We engineer high-performance web applications and corporate websites for modern enterprises.',
+  title: 'Web Development Company Gujarat — Enterprise Web Solutions | Nuvirexa',
+  description: 'Leading web development company in Gujarat. Nuvirexa engineers high-performance web applications, corporate websites, and SaaS platforms for modern enterprises.',
   path: '/web-development-company-gujarat',
 })
 
