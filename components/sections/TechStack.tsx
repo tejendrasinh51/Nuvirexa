@@ -20,44 +20,44 @@ const techCategories = [
 
 export function TechStack() {
   return (
-    <section className="section-pad relative overflow-hidden">
+    <section className="section-pad relative overflow-hidden bg-[#E0E5EC]">
       <div className="container mx-auto">
-        <FadeIn className="text-center mb-12">
-          <ShinyText className="font-mono text-sm text-accent-cyan tracking-widest uppercase mb-4 block">
+        <FadeIn className="mb-12 text-center">
+          <ShinyText className="mb-4 block font-mono text-sm uppercase tracking-[0.2em] text-[#6C63FF]">
             Technology
           </ShinyText>
-          <BlurReveal as="h2" className="font-display text-display-md font-black text-white justify-center">
+          <BlurReveal as="h2" className="font-display text-display-md font-black text-[#3D4852]">
             Our Tech Stack
           </BlurReveal>
         </FadeIn>
 
-        <Marquee duration={50} pauseOnHover className="mb-16 opacity-50 hover:opacity-80 transition-opacity">
+        <Marquee duration={50} pauseOnHover className="mb-16 opacity-80 transition-opacity hover:opacity-100">
           {allTech.map((tech) => (
             <span
               key={tech}
-              className="px-5 py-2 glass rounded-full text-sm font-mono text-white/60 border border-white/[0.06] whitespace-nowrap"
+              className="whitespace-nowrap rounded-full bg-[#E0E5EC] px-5 py-2 text-sm font-mono text-[#6B7280] shadow-[6px_6px_12px_rgba(163,177,198,0.6),-6px_-6px_12px_rgba(255,255,255,0.5)]"
             >
               {tech}
             </span>
           ))}
         </Marquee>
 
-        <div className="max-w-4xl mx-auto space-y-10">
+        <div className="mx-auto max-w-4xl space-y-10">
           {techCategories.map((cat, i) => (
             <FadeIn key={cat.name} delay={i * 0.08}>
-              <div>
-                <h3 className="font-mono text-xs text-white/30 tracking-widest uppercase mb-4 flex items-center gap-2">
-                  <span className="w-8 h-px bg-gradient-to-r from-accent-violet to-accent-cyan" />
+              <div className="rounded-[24px] bg-[#E0E5EC] p-5 shadow-[9px_9px_16px_rgb(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] sm:p-6">
+                <h3 className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-[#6B7280]">
+                  <span className="h-px w-8 bg-gradient-to-r from-[#6C63FF] to-[#38B2AC]" />
                   {cat.name}
                 </h3>
                 <div className="flex flex-wrap gap-3">
                   {cat.techs.map((tech) => (
                     <div
                       key={tech}
-                      className="group flex items-center gap-2 glass border border-white/[0.08] hover:border-accent-violet/30 rounded-xl px-4 py-2.5 transition-all duration-300 cursor-default hover:shadow-glow-violet-sm"
+                      className="group flex h-11 items-center gap-2 rounded-xl bg-[#E0E5EC] px-4 py-2.5 shadow-[inset_4px_4px_8px_rgba(163,177,198,0.5),inset_-4px_-4px_8px_rgba(255,255,255,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[6px_6px_12px_rgba(163,177,198,0.6),-6px_-6px_12px_rgba(255,255,255,0.5)]"
                     >
-                      <span className="w-2 h-2 rounded-full bg-accent-cyan/60 group-hover:bg-accent-cyan transition-colors" />
-                      <span className="text-sm text-white/60 group-hover:text-white transition-colors">{tech}</span>
+                      <span className="h-2 w-2 rounded-full bg-[#38B2AC]" />
+                      <span className="text-sm text-[#6B7280] transition-colors group-hover:text-[#3D4852]">{tech}</span>
                     </div>
                   ))}
                 </div>

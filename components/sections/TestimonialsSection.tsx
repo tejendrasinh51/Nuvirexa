@@ -12,20 +12,20 @@ const DotMatrix = dynamic(() => import('@/components/backgrounds/DotMatrix').the
 
 function TestimonialCard({ name, role, company, quote, rating }: Testimonial) {
   return (
-    <div className="w-[min(380px,calc(100vw-3rem))] flex-shrink-0 mx-2 sm:mx-3 glass border border-white/[0.08] hover:border-accent-violet/20 rounded-2xl p-5 sm:p-6 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
-      <div className="flex gap-1 mb-4">
+    <div className="mx-2 w-[min(380px,calc(100vw-3rem))] flex-shrink-0 rounded-[28px] bg-[#E0E5EC] p-5 shadow-[9px_9px_16px_rgb(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[12px_12px_20px_rgb(163,177,198,0.7),-12px_-12px_20px_rgba(255,255,255,0.6)] sm:mx-3 sm:p-6">
+      <div className="mb-4 flex gap-1">
         {Array.from({ length: rating }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+          <Star key={i} className="h-4 w-4 fill-[#fbbf24] text-[#fbbf24]" />
         ))}
       </div>
-      <p className="text-white/70 text-sm leading-relaxed mb-5">&ldquo;{quote}&rdquo;</p>
+      <p className="mb-5 text-sm leading-relaxed text-[#6B7280]">&ldquo;{quote}&rdquo;</p>
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-violet to-accent-cyan flex items-center justify-center text-white font-bold text-sm">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E0E5EC] text-sm font-bold text-[#3D4852] shadow-[inset_6px_6px_12px_rgba(163,177,198,0.6),inset_-6px_-6px_12px_rgba(255,255,255,0.5)]">
           {name.charAt(0)}
         </div>
         <div>
-          <p className="text-white font-semibold text-sm">{name}</p>
-          <p className="text-white/40 text-xs">
+          <p className="text-sm font-semibold text-[#3D4852]">{name}</p>
+          <p className="text-xs text-[#6B7280]">
             {role}, {company}
           </p>
         </div>
@@ -39,22 +39,22 @@ export function TestimonialsSection() {
   const row2 = [...testimonials.slice().reverse(), ...testimonials.slice().reverse()]
 
   return (
-    <section className="relative section-pad overflow-hidden section-alt-2">
-      <DotMatrix opacity={0.08} />
+    <section className="relative section-pad overflow-hidden bg-[#E0E5EC]">
+      <DotMatrix opacity={0.06} />
 
-      <div className="container mx-auto mb-12 sm:mb-16 text-center relative z-10">
-        <ShinyText className="font-mono text-sm text-accent-cyan tracking-widest uppercase mb-4 block">
+      <div className="container relative z-10 mx-auto mb-12 text-center sm:mb-16">
+        <ShinyText className="mb-4 block font-mono text-sm uppercase tracking-[0.2em] text-[#6C63FF]">
           Client Love
         </ShinyText>
-        <BlurReveal as="h2" className="font-display text-display-md font-black text-white justify-center">
+        <BlurReveal as="h2" className="font-display text-display-md font-black text-[#3D4852]">
           What Clients Say
         </BlurReveal>
       </div>
 
-      <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+      <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-12 bg-gradient-to-r from-[#E0E5EC] to-transparent sm:w-32" />
+      <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-12 bg-gradient-to-l from-[#E0E5EC] to-transparent sm:w-32" />
 
-      <Marquee direction="left" duration={45} className="mb-4 relative z-0">
+      <Marquee direction="left" duration={45} className="relative z-0 mb-4">
         {row1.map((t, i) => (
           <TestimonialCard key={`${t.id}-${i}`} {...t} />
         ))}

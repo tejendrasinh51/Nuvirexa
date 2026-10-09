@@ -11,21 +11,22 @@ import { JsonLd } from '@/components/seo/JsonLd'
 
 export function FaqSection() {
   const faqSchema = createFaqSchema(faqItems.map((f) => ({ question: f.question, answer: f.answer })))
+
   return (
-    <section className="section-pad relative section-alt">
+    <section className="section-pad relative bg-[#E0E5EC]">
       <JsonLd data={faqSchema} />
-      <div className="container mx-auto max-w-3xl relative z-10">
-        <FadeIn className="text-center mb-12 sm:mb-16">
-          <ShinyText className="font-mono text-sm text-accent-cyan tracking-widest uppercase mb-4 block">
+      <div className="container relative z-10 mx-auto max-w-3xl">
+        <FadeIn className="mb-12 text-center sm:mb-16">
+          <ShinyText className="mb-4 block font-mono text-sm uppercase tracking-[0.2em] text-[#6C63FF]">
             FAQ
           </ShinyText>
           <BlurReveal
             as="h2"
-            className="font-display text-display-sm sm:text-display-md font-black text-white justify-center text-balance"
+            className="font-display text-display-sm font-black text-[#3D4852] sm:text-display-md"
           >
             Frequently Asked Questions
           </BlurReveal>
-          <p className="text-muted text-lg mt-4">Everything you need to know before we build together.</p>
+          <p className="mt-4 text-lg text-[#6B7280]">Everything you need to know before we build together.</p>
         </FadeIn>
 
         <FadeIn>
@@ -34,16 +35,16 @@ export function FaqSection() {
               <Accordion.Item
                 key={item.id}
                 value={item.id}
-                className="glass border border-white/[0.06] hover:border-accent-violet/20 rounded-xl overflow-hidden transition-colors"
+                className="overflow-hidden rounded-[24px] bg-[#E0E5EC] shadow-[9px_9px_16px_rgb(163,177,198,0.6),-9px_-9px_16px_rgba(255,255,255,0.5)] transition-all duration-300 hover:shadow-[12px_12px_20px_rgb(163,177,198,0.7),-12px_-12px_20px_rgba(255,255,255,0.6)]"
               >
                 <Accordion.Header>
-                  <Accordion.Trigger className="flex w-full items-center justify-between px-6 py-5 text-left font-medium text-white hover:bg-white/[0.04] transition-colors group">
+                  <Accordion.Trigger className="group flex w-full items-center justify-between px-6 py-5 text-left font-medium text-[#3D4852] transition-colors hover:bg-[#E8EDF4]">
                     {item.question}
-                    <ChevronDown className="w-5 h-5 text-accent-cyan shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                    <ChevronDown className="h-5 w-5 shrink-0 text-[#6C63FF] transition-transform duration-300 group-data-[state=open]:rotate-180" />
                   </Accordion.Trigger>
                 </Accordion.Header>
                 <Accordion.Content className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
-                  <div className="px-6 pb-5 text-muted text-sm leading-relaxed border-t border-white/[0.04] pt-4">
+                  <div className="border-t border-white/50 px-6 pb-5 pt-4 text-sm leading-relaxed text-[#6B7280]">
                     {item.answer}
                   </div>
                 </Accordion.Content>

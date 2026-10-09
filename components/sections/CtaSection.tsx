@@ -26,47 +26,41 @@ export function CtaSection({
   const isBottom = variant === 'bottom'
 
   return (
-    <section className="relative section-pad overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-950/60 via-background to-cyan-950/30" />
-      <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-[280px] sm:w-[600px] h-[280px] sm:h-[600px] rounded-full bg-accent-violet/20 blur-[80px] sm:blur-[150px] pointer-events-none" />
-      <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] rounded-full bg-accent-cyan/10 blur-[60px] sm:blur-[120px] pointer-events-none" />
-      <GridPattern opacity={0.05} />
-      <NoiseOverlay opacity={0.04} />
+    <section className="relative section-pad overflow-hidden bg-[#E0E5EC]">
+      <GridPattern opacity={0.04} />
+      <NoiseOverlay opacity={0.02} />
 
-      <div className="container mx-auto relative z-10">
-        <div className="relative max-w-4xl mx-auto">
-          <div className="relative p-6 sm:p-10 md:p-16 rounded-2xl sm:rounded-3xl overflow-hidden animate-breathing">
-            <div className="absolute inset-0 rounded-3xl p-px bg-gradient-to-br from-accent-violet/50 via-transparent to-accent-cyan/30">
-              <div className="absolute inset-0 rounded-3xl bg-[#0A0A14]/90 backdrop-blur-xl" />
-            </div>
-
-            <div className="absolute top-0 left-0 w-12 h-12 sm:w-20 sm:h-20 border-t-2 border-l-2 border-accent-violet/60 rounded-tl-2xl sm:rounded-tl-3xl pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-12 h-12 sm:w-20 sm:h-20 border-b-2 border-r-2 border-accent-cyan/40 rounded-br-2xl sm:rounded-br-3xl pointer-events-none" />
+      <div className="container relative z-10 mx-auto">
+        <div className="mx-auto max-w-4xl">
+          <div className="neu-card relative overflow-hidden rounded-[32px] p-6 sm:p-10 md:p-16">
+            <div className="absolute inset-0 rounded-[32px] border border-white/40" aria-hidden />
+            <div className="absolute left-0 top-0 h-14 w-14 rounded-br-[24px] border-b border-r border-white/60 bg-[#E0E5EC]/40" aria-hidden />
+            <div className="absolute bottom-0 right-0 h-14 w-14 rounded-tl-[24px] border-l border-t border-white/60 bg-[#E0E5EC]/40" aria-hidden />
 
             <div className="relative z-10 text-center">
-              <h2 className="font-display text-2xl sm:text-display-sm md:text-display-md font-black text-white leading-tight mb-4 sm:mb-6 text-balance px-1">
+              <h2 className="mb-4 px-1 font-display text-2xl font-black leading-tight text-[#3D4852] sm:text-display-sm md:text-display-md">
                 <BlurReveal as="span" className="justify-center">
                   {title || (isBottom ? 'Ready to Build Something Extraordinary?' : 'Ready to Transform Your Digital Presence?')}
                 </BlurReveal>
               </h2>
 
               <FadeIn delay={0.3}>
-                <p className="text-white/60 text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
+                <p className="mx-auto mb-8 max-w-2xl px-2 text-base leading-relaxed text-[#6B7280] sm:text-lg md:text-xl">
                   {subtitle}
                 </p>
               </FadeIn>
 
               <FadeIn delay={0.5}>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full max-w-md sm:max-w-none mx-auto">
+                <div className="mx-auto flex w-full max-w-md flex-col justify-center gap-3 sm:max-w-none sm:flex-row">
                   <MagneticButton className="w-full sm:w-auto">
                     <CalButton size="xl" className="group w-full sm:w-auto">
                       Schedule a Discovery Call
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </CalButton>
                   </MagneticButton>
                   <MagneticButton className="w-full sm:w-auto">
                     <Link href={isBottom ? '/portfolio' : '/contact'} className="block w-full sm:w-auto">
-                      <Button size="xl" variant="secondary" className="w-full">
+                      <Button size="xl" variant="secondary" className="w-full sm:w-auto">
                         {isBottom ? 'View Case Studies' : 'Contact Us'}
                       </Button>
                     </Link>
@@ -75,15 +69,15 @@ export function CtaSection({
               </FadeIn>
 
               <FadeIn delay={0.7}>
-                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mt-10 text-white/40 text-sm">
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-[#6B7280] md:gap-8">
                   <span className="flex items-center gap-2">
-                    <Check className="w-3 h-3 text-green-400" /> Free Discovery Call
+                    <Check className="h-3 w-3 text-[#38B2AC]" /> Free Discovery Call
                   </span>
                   <span className="flex items-center gap-2">
-                    <Check className="w-3 h-3 text-green-400" /> No Commitment
+                    <Check className="h-3 w-3 text-[#38B2AC]" /> No Commitment
                   </span>
                   <span className="flex items-center gap-2">
-                    <Check className="w-3 h-3 text-green-400" /> 48hr Response
+                    <Check className="h-3 w-3 text-[#38B2AC]" /> 48hr Response
                   </span>
                 </div>
               </FadeIn>
