@@ -12,26 +12,26 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, badge }: PageHeaderProps) {
   return (
-    <section className="pt-28 sm:pt-32 md:pt-36 pb-14 sm:pb-20 relative overflow-hidden min-h-[32vh] sm:min-h-[40vh] flex items-end">
+    <section className="relative flex min-h-[32vh] items-end overflow-hidden pb-14 pt-28 sm:min-h-[40vh] sm:pb-20 sm:pt-32 md:pt-36">
       <GradientOrbs variant="hero" />
       <NoiseOverlay opacity={0.03} />
-      <div className="absolute inset-0 bg-mesh-1 pointer-events-none opacity-60" aria-hidden />
-      <div className="container mx-auto relative z-10 text-center pb-6 sm:pb-8">
+      <div className="absolute inset-0 bg-[#e8edf5]/60" aria-hidden />
+      <div className="container relative z-10 mx-auto pb-6 text-center sm:pb-8">
         <FadeIn eager>
           {badge && (
-            <ShinyText className="font-mono text-sm text-accent-cyan tracking-widest uppercase mb-4 block">
+            <ShinyText className="mb-4 block font-mono text-sm uppercase tracking-[0.2em] text-[#6C63FF]">
               {badge}
             </ShinyText>
           )}
           <BlurReveal
             as="h1"
             priority
-            className="font-display text-display-sm sm:text-display-md lg:text-display-lg font-black text-white mb-4 justify-center text-balance px-2"
+            className="mb-4 justify-center px-2 font-display text-display-sm font-black text-[#3D4852] sm:text-display-md lg:text-display-lg"
           >
             {title}
           </BlurReveal>
           {subtitle && (
-            <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto leading-relaxed px-4">{subtitle}</p>
+            <p className="mx-auto max-w-2xl px-4 text-base leading-relaxed text-[#6B7280] sm:text-lg">{subtitle}</p>
           )}
         </FadeIn>
       </div>

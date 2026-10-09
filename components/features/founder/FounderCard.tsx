@@ -8,16 +8,15 @@ import { SITE, SOCIAL_LINKS } from '@/lib/constants'
 
 const ProfileCard = dynamic(() => import('@/components/features/profile-card/ProfileCard'), { ssr: false })
 
-const PROFILE_INNER_GRADIENT = 'linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)'
+const PROFILE_INNER_GRADIENT = 'linear-gradient(145deg,#f4f7fb 0%,#dfeaf8 100%)'
 
 export function FounderCard() {
   const router = useRouter()
   const enableTilt = usePrefersFinePointer()
 
   return (
-    <section className="section-pad relative overflow-hidden">
-      <div className="absolute inset-0 bg-mesh-2 opacity-30 pointer-events-none" aria-hidden />
-      <div className="container mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
+    <section className="section-pad relative overflow-hidden bg-[#E0E5EC]">
+      <div className="container relative z-10 mx-auto grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <FadeIn direction="left" className="flex justify-center">
           <ProfileCard
             className="profile-card--founder"
@@ -41,10 +40,12 @@ export function FounderCard() {
 
         <FadeIn direction="right" delay={0.1}>
           <div>
-            <p className="text-accent-cyan font-mono text-sm mb-3">Meet the founder</p>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-2 text-balance">{SITE.founder}</h2>
-            <p className="text-muted text-base sm:text-lg mb-6">Founder & CEO, {SITE.name}</p>
-            <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="mb-3 font-mono text-sm uppercase tracking-[0.2em] text-[#6C63FF]">Meet the founder</p>
+            <h2 className="mb-2 font-display text-3xl font-bold text-[#3D4852] sm:text-4xl md:text-5xl">
+              {SITE.founder}
+            </h2>
+            <p className="mb-6 text-base text-[#6B7280] sm:text-lg">Founder & CEO, {SITE.name}</p>
+            <p className="mb-8 text-base leading-relaxed text-[#3D4852]/80 sm:text-lg">
               A passionate technologist and entrepreneur dedicated to helping businesses unlock their digital
               potential. With deep expertise in modern web development and AI, Tejendrasinh founded Nuvirexa to
               bridge the gap between great ideas and exceptional digital execution.
@@ -56,7 +57,7 @@ export function FounderCard() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass px-4 py-2 rounded-lg text-sm text-muted hover:text-white transition-colors"
+                  className="rounded-xl bg-[#E0E5EC] px-4 py-2 text-sm text-[#6B7280] shadow-[7px_7px_14px_rgba(163,177,198,0.6),-7px_-7px_14px_rgba(255,255,255,0.5)] transition-colors hover:text-[#3D4852]"
                 >
                   {s.label}
                 </a>

@@ -1,19 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { useScrolledNav } from '@/hooks/useScrolledNav'
-import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { NAV_LINKS, SITE } from '@/lib/constants'
 import { cn } from '@/lib/utils'
+import { useScrolledNav } from '@/hooks/useScrolledNav'
 
 export function Navbar() {
   const scrolled = useScrolledNav(50)
-  const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     setMobileOpen(false)
@@ -30,20 +30,21 @@ export function Navbar() {
     <>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:bg-[#6C63FF] focus:rounded-2xl focus:text-white"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-2xl focus:bg-[#6C63FF] focus:px-4 focus:py-2 focus:text-white"
       >
         Skip to main content
       </a>
+
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 px-4 transition-all duration-500 ease-out md:px-8',
+          'fixed left-0 right-0 top-0 z-50 px-4 transition-all duration-500 ease-out md:px-8',
           scrolled
-            ? 'border-b border-white/40 bg-[#E0E5EC]/80 py-3 shadow-[0_8px_30px_rgba(163,177,198,0.35)] backdrop-blur-xl'
+            ? 'border-b border-white/50 bg-[#E0E5EC]/85 py-3 shadow-[0_8px_30px_rgba(163,177,198,0.35)] backdrop-blur-xl'
             : 'bg-transparent py-6'
         )}
       >
         <nav className="container mx-auto flex items-center justify-between safe-top" aria-label="Main navigation">
-          <Link href="/" className="flex items-center gap-2 group no-underline transition-opacity hover:opacity-80">
+          <Link href="/" className="group flex items-center gap-2 no-underline transition-opacity hover:opacity-80">
             <span className="font-display text-[1.15rem] font-extrabold tracking-[-0.02em] text-[#3D4852]">
               Nuvirexa
             </span>
@@ -62,7 +63,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   prefetch
-                  className="relative py-1 text-[0.9rem] font-medium tracking-[0.01em] text-[#3D4852]/75 transition-colors hover:text-[#3D4852]"
+                  className="group relative py-1 text-[0.9rem] font-medium tracking-[0.01em] text-[#3D4852]/75 transition-colors hover:text-[#3D4852]"
                 >
                   {link.label}
                   <span
@@ -105,7 +106,7 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-[#E0E5EC]/95 pt-[env(safe-area-inset-top)] lg:hidden"
+            className="fixed inset-0 z-40 bg-[#E0E5EC]/96 pt-[env(safe-area-inset-top)] lg:hidden"
           >
             <motion.nav
               initial={{ opacity: 0, y: 16 }}
@@ -113,12 +114,12 @@ export function Navbar() {
               exit={{ opacity: 0, y: 16 }}
               className="flex h-full flex-col items-center justify-center gap-8"
             >
-              {NAV_LINKS.map((link, i) => (
+              {NAV_LINKS.map((link, index) => (
                 <motion.div
                   key={link.href}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  transition={{ delay: index * 0.08 }}
                 >
                   <Link href={link.href} className="text-2xl font-bold text-[#3D4852]">
                     {link.label}
