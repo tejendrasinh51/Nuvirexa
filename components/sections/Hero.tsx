@@ -26,59 +26,54 @@ const heroStats = [
 
 export function Hero() {
   return (
-    <section className="hero relative">
+    <section className="hero relative bg-[#E0E5EC] text-[#3D4852]">
       <Aurora />
       <Particles />
       <GradientOrbs variant="hero" />
       <NoiseOverlay opacity={0.04} />
 
-      <div
-        className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/80 to-transparent z-[3] pointer-events-none"
-        aria-hidden
-      />
+      <div className="absolute inset-x-0 bottom-0 z-[3] h-48 bg-gradient-to-t from-[#dfe4eb] via-[#e0e5ec]/80 to-transparent" aria-hidden />
 
       <div className="hero-content relative z-10 text-center">
         <SlideUp delay={0}>
           <div className="hero-badge">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse shrink-0" />
-            <ShinyText className="font-mono uppercase">
-              ✦ Nuvirexa Agency
-            </ShinyText>
+            <span className="h-2 w-2 rounded-full bg-[#6C63FF]" />
+            <ShinyText className="font-mono uppercase text-[#3D4852]">✦ Nuvirexa Agency</ShinyText>
           </div>
         </SlideUp>
 
-        <h1 className="font-display text-balance px-1">
+        <h1 className="px-1 font-display text-balance text-[#3D4852]">
           <SlideUp delay={0.15}>
-            <span className="block text-white">We Build Brands</span>
+            <span className="block">We Build Brands</span>
           </SlideUp>
           <SlideUp delay={0.3}>
-            <span className="block text-center text-white">
+            <span className="block text-center">
               <BlurReveal as="span">That Dominate</BlurReveal>
             </span>
           </SlideUp>
           <SlideUp delay={0.45}>
-            <span className="block mt-2">
+            <span className="mt-2 block">
               <ScrambleText text="Online." className="font-black" />
             </span>
           </SlideUp>
         </h1>
 
         <SlideUp delay={0.65}>
-          <p className="hero-subtitle px-2">
+          <p className="hero-subtitle mx-auto mt-6 max-w-2xl px-2 text-lg text-[#6B7280]">
             Premium websites, AI tools, and digital strategies for ambitious brands ready to dominate their market.
           </p>
         </SlideUp>
 
-        <SlideUp delay={0.6}>
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto px-2 sm:px-0">
+        <SlideUp delay={0.75}>
+          <div className="mx-auto mb-12 flex w-full max-w-md flex-col items-stretch justify-center gap-3 px-2 sm:max-w-none sm:flex-row">
             <MagneticButton className="w-full sm:w-auto">
-              <CalButton size="lg" className="hero-cta-primary w-full sm:w-auto">
+              <CalButton size="lg" className="w-full sm:w-auto">
                 Schedule a Call
               </CalButton>
             </MagneticButton>
             <MagneticButton className="w-full sm:w-auto">
               <Link href="/portfolio" className="block w-full sm:w-auto">
-                <Button variant="secondary" size="lg" className="hero-cta-secondary w-full">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                   View Our Work
                 </Button>
               </Link>
@@ -87,13 +82,13 @@ export function Hero() {
         </SlideUp>
 
         <SlideUp delay={0.95}>
-          <div className="flex flex-col items-center gap-4 mb-20">
-            <p className="text-sm text-muted font-mono tracking-wide">Trusted by 50+ ambitious brands</p>
+          <div className="mb-20 flex flex-col items-center gap-4">
+            <p className="font-mono text-sm tracking-[0.2em] text-[#6B7280] uppercase">Trusted by 50+ ambitious brands</p>
             <div className="flex -space-x-3">
               {['AC', 'BL', 'CX', 'DV', 'EW', 'FX'].map((initials, i) => (
                 <div
                   key={initials}
-                  className="w-11 h-11 rounded-full glass-strong flex items-center justify-center text-xs font-mono text-white border-2 border-background shadow-glow-violet-sm"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#E0E5EC] bg-[#E0E5EC] text-xs font-mono font-bold text-[#3D4852] shadow-[6px_6px_12px_rgba(163,177,198,0.6),-6px_-6px_12px_rgba(255,255,255,0.5)]"
                   style={{ zIndex: 6 - i }}
                 >
                   {initials}
@@ -103,18 +98,18 @@ export function Hero() {
           </div>
         </SlideUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto px-2 sm:px-0">
+        <div className="mx-auto grid max-w-3xl grid-cols-1 gap-3 px-2 sm:grid-cols-3 sm:gap-4 sm:px-0">
           {heroStats.map((stat, i) => (
             <SlideUp key={stat.label} delay={1.1 + i * 0.18}>
-              <div className="glass border border-white/10 hover:border-accent-violet/40 rounded-2xl p-5 flex items-center gap-4 transition-all duration-300 hover:shadow-glow-violet hover:-translate-y-1 text-left">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-violet/30 to-accent-cyan/20 border border-accent-violet/20 flex items-center justify-center shrink-0">
-                  <stat.icon className="w-5 h-5 text-accent-violet" />
+              <div className="hero-stat flex items-center gap-4">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#E0E5EC] text-[#6C63FF] shadow-[inset_7px_7px_14px_rgba(163,177,198,0.6),inset_-7px_-7px_14px_rgba(255,255,255,0.6)]">
+                  <stat.icon className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="font-display text-2xl font-bold text-gradient">
+                <div className="text-left">
+                  <p className="font-display text-2xl font-bold text-[#3D4852]">
                     <CountUp end={stat.value} suffix={stat.suffix} />
                   </p>
-                  <p className="text-xs text-muted">{stat.label}</p>
+                  <p className="text-xs text-[#6B7280]">{stat.label}</p>
                 </div>
               </div>
             </SlideUp>
@@ -123,12 +118,12 @@ export function Hero() {
       </div>
 
       <motion.div
-        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <span className="text-xs font-mono text-white/30 tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-accent-cyan/50 to-transparent" />
+        <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#6B7280]">Scroll</span>
+        <div className="h-12 w-px bg-gradient-to-b from-[#6C63FF] to-transparent" />
       </motion.div>
     </section>
   )

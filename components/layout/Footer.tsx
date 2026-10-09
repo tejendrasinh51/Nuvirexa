@@ -56,22 +56,16 @@ export function Footer() {
   }
 
   return (
-    <footer className="relative border-t border-white/[0.06] overflow-hidden bg-[#0A0A14]">
-      <DotMatrix opacity={0.06} />
+    <footer className="relative overflow-hidden bg-[#E0E5EC] text-[#3D4852]">
+      <DotMatrix opacity={0.08} />
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-        <span className="text-[18vw] font-display font-black text-white/[0.02] whitespace-nowrap tracking-tighter">
-          NUVIREXA
-        </span>
-      </div>
-
-      <div className="relative border-b border-white/[0.06] py-12 bg-gradient-to-r from-violet-950/30 via-[#0A0A14] to-cyan-950/20">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+      <div className="relative border-b border-white/60 bg-[#E0E5EC] py-12">
+        <div className="container relative z-10 mx-auto flex flex-col items-center justify-between gap-6 md:flex-row">
           <div>
-            <h3 className="font-display font-bold text-2xl text-white mb-1">Stay in the loop</h3>
-            <p className="text-white/50 text-sm">Agency insights, case studies & digital trends.</p>
+            <h3 className="mb-1 font-display text-2xl font-bold text-[#3D4852]">Stay in the loop</h3>
+            <p className="text-sm text-[#6B7280]">Agency insights, case studies & digital trends.</p>
           </div>
-          <form onSubmit={handleNewsletter} className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
+          <form onSubmit={handleNewsletter} className="flex w-full flex-col gap-2 sm:flex-row md:w-auto">
             <input
               type="email"
               value={email}
@@ -79,23 +73,23 @@ export function Footer() {
               placeholder="you@company.com"
               required
               aria-label="Email for newsletter"
-              className="form-field flex-1 md:w-64 text-sm"
+              className="w-full rounded-2xl border border-white/60 bg-[#E0E5EC] px-4 py-3 text-sm text-[#3D4852] shadow-[inset_8px_8px_16px_rgba(163,177,198,0.6),inset_-8px_-8px_16px_rgba(255,255,255,0.5)] outline-none transition-all placeholder:text-[#6B7280] focus:ring-2 focus:ring-[#6C63FF] md:w-64"
             />
-            <Button type="submit" size="md" disabled={loading} className="w-full sm:w-auto shrink-0">
+            <Button type="submit" size="md" disabled={loading} className="w-full sm:w-auto">
               {loading ? '...' : 'Subscribe'}
             </Button>
           </form>
         </div>
       </div>
 
-      <div className="relative container mx-auto py-12 sm:py-16 z-10">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10">
+      <div className="relative z-10 container mx-auto py-12 sm:py-16">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-6 sm:gap-10">
           <div className="col-span-2 lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="font-display font-black text-2xl text-white">Nuvirexa</span>
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-accent-violet to-accent-cyan animate-pulse" />
+            <div className="mb-4 flex items-center gap-2">
+              <span className="font-display text-2xl font-black text-[#3D4852]">Nuvirexa</span>
+              <div className="h-2.5 w-2.5 rounded-full bg-[#6C63FF]" />
             </div>
-            <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="mb-6 max-w-xs text-sm leading-relaxed text-[#6B7280]">
               Premium digital growth partner serving ambitious businesses across India — building world-class websites, apps, and AI solutions.
             </p>
             <div className="flex gap-3">
@@ -105,7 +99,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 glass border border-white/[0.08] hover:border-accent-violet/40 rounded-lg flex items-center justify-center text-white/40 hover:text-white transition-all hover:shadow-glow-violet-sm text-xs font-mono"
+                  className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#E0E5EC] text-[#3D4852] shadow-[6px_6px_12px_rgba(163,177,198,0.6),-6px_-6px_12px_rgba(255,255,255,0.5)] transition-all hover:-translate-y-0.5 hover:shadow-[8px_8px_16px_rgba(163,177,198,0.7),-8px_-8px_16px_rgba(255,255,255,0.7)]"
                   aria-label={social.label}
                 >
                   {social.label[0]}
@@ -113,7 +107,7 @@ export function Footer() {
               ))}
             </div>
             <p className="mt-6">
-              <a href={`mailto:${SITE.email}`} className="text-accent-cyan text-sm hover:text-white transition-colors">
+              <a href={`mailto:${SITE.email}`} className="text-sm text-[#6C63FF] transition-colors hover:text-[#3D4852]">
                 {SITE.email}
               </a>
             </p>
@@ -121,11 +115,11 @@ export function Footer() {
 
           {footerColumns.map((col) => (
             <div key={col.title}>
-              <h4 className="font-mono text-xs text-white/30 tracking-widest uppercase mb-4">{col.title}</h4>
+              <h4 className="mb-4 text-xs font-mono uppercase tracking-[0.2em] text-[#6B7280]">{col.title}</h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-white/50 hover:text-accent-cyan transition-colors">
+                    <Link href={link.href} className="text-sm text-[#6B7280] transition-colors hover:text-[#3D4852]">
                       {link.label}
                     </Link>
                   </li>
@@ -135,13 +129,13 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/20 text-sm font-mono">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/60 pt-8 md:flex-row">
+          <p className="text-sm text-[#6B7280]">
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
-          <p className="text-white/20 text-xs flex items-center gap-1">
+          <p className="flex items-center gap-1 text-xs text-[#6B7280]">
             <span>Crafted with</span>
-            <span className="text-red-400">♥</span>
+            <span className="text-[#E85D75]">♥</span>
             <span>by {SITE.founder}</span>
           </p>
         </div>

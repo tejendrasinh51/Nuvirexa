@@ -128,7 +128,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="bg-background text-foreground antialiased">
         <NavigationProgress />
         <ScrollToTop />
         <Navbar />
@@ -139,9 +139,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           position="bottom-right"
           toastOptions={{
             style: {
-              background: '#13131F',
-              color: '#F8FAFC',
-              border: '1px solid rgba(255,255,255,0.08)',
+              background: '#E0E5EC',
+              color: '#3D4852',
+              border: '1px solid rgba(255,255,255,0.6)',
+              boxShadow: '9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5)',
             },
           }}
         />
